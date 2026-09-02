@@ -22,7 +22,7 @@ export const SocketProvider = ({ children }) => {
 
     const SOCKET_URL =
       process.env.REACT_APP_SOCKET_URL ||
-      'https://foodash-backend-v2.onrender.com';
+      'https://foodash-backend-z1cg.onrender.com';
 
     // Create socket connection
     socketRef.current = io(SOCKET_URL, {

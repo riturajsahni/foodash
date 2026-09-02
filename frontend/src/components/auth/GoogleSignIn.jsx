@@ -18,7 +18,7 @@ const GoogleIcon = () => (
 // Redirects user to Google → comes back via /auth/google/success
 export function GoogleSignInButton({ label = 'Continue with Google', className = '' }) {
   const handleClick = () => {
-    window.location.href = `${process.env.REACT_APP_API_URL || 'http://localhost:5001/api'}/auth/google`;
+    window.location.href = `${process.env.REACT_APP_API_URL || 'https://foodash-backend-z1cg.onrender.com/api'}/auth/google`;
   };
 
   return (
