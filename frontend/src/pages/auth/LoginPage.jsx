@@ -5,12 +5,6 @@ import { GoogleSignInButton } from '../../components/auth/GoogleSignIn';
 import toast from 'react-hot-toast';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 
-const DEMO_ACCOUNTS = [
-  { label: 'Customer',   email: 'customer@foodash.com',   color: 'bg-brand-100 text-brand-700 hover:bg-brand-200 dark:bg-brand-900/30 dark:text-brand-400' },
-  { label: 'Restaurant', email: 'restaurant@foodash.com', color: 'bg-purple-100 text-purple-700 hover:bg-purple-200 dark:bg-purple-900/30 dark:text-purple-400' },
-  { label: 'Delivery',   email: 'delivery@foodash.com',   color: 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/30 dark:text-green-400' },
-  { label: 'Admin',      email: 'admin@foodash.com',      color: 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300' },
-];
 
 export default function LoginPage() {
   const [form,    setForm]    = useState({ email: '', password: '' });
@@ -112,21 +106,6 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Demo accounts */}
-        <div className="mt-4 card p-4">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
-            Demo Accounts (password: password123)
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            {DEMO_ACCOUNTS.map(a => (
-              <button key={a.label}
-                onClick={() => setForm({ email: a.email, password: 'password123' })}
-                className={`text-xs font-semibold py-1.5 px-3 rounded-lg transition-colors ${a.color}`}>
-                {a.label}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
